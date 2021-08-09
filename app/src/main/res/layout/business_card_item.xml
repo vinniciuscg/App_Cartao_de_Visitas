@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -8,18 +9,20 @@
         android:id="@+id/card_body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="5dp"
         android:checkable="true"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="16dp"
-        android:layout_margin="16dp"
         app:cardElevation="8dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="16:9">
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -30,22 +33,24 @@
                 android:id="@+id/business_card_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:text="@string/business_card_name"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
             </com.google.android.material.textview.MaterialTextView>
+
+
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/business_card_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginTop="8dp"
                 android:text="@string/business_card_phone"
-                app:layout_constraintTop_toBottomOf="@id/business_card_name"
-                app:layout_constraintStart_toStartOf="parent">
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/business_card_name">
 
             </com.google.android.material.textview.MaterialTextView>
 
@@ -53,11 +58,11 @@
                 android:id="@+id/business_card_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginTop="8dp"
                 android:text="@string/business_card_email"
-                app:layout_constraintTop_toBottomOf="@id/business_card_phone"
-                app:layout_constraintStart_toStartOf="parent">
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/business_card_phone">
 
             </com.google.android.material.textview.MaterialTextView>
 
@@ -65,14 +70,22 @@
                 android:id="@+id/business_card_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:layout_marginTop="8dp"
                 android:text="@string/business_card_company"
-                app:layout_constraintTop_toBottomOf="@id/business_card_email"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/business_card_email">
 
             </com.google.android.material.textview.MaterialTextView>
+
+            <ImageView
+                android:id="@+id/card_item_delete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

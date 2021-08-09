@@ -20,6 +20,6 @@ interface BusinessCardDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(businessCards: BusinessCard)
 
-    @Delete
-    fun delete(businessCard: BusinessCard)
+    @Query("DELETE FROM BusinessCard WHERE nome LIKE (:nomeBusca)")
+    suspend fun deleteByName(nomeBusca: String)
 }

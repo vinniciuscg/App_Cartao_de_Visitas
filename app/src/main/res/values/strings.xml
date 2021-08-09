@@ -13,4 +13,16 @@
     <string name="new_card_color">Cor</string>
     <string name="btn_new_card_adicionar">Adicionar</string>
     <string name="add_card_success">Novo cartão salvo com sucesso!</string>
+    <string name="label_share">Compartilhar</string>
+    <string name="option_delete_card_item">Deletar</string>
+    <string name="card_item_options_delete">Deletar</string>
+    <string-array name="business_card_colors">
+        <item name="business_card_colors_green">Branco</item>
+        <item name="business_card_colors_green">Verde</item>
+        <item name="business_card_colors_red">Vermelho</item>
+        <item name="business_card_colors_yellow">Amarelo</item>
+        <item name="business_card_colors_orange">Laranja</item>
+        <item name="business_card_colors_blue">Azul</item>
+        <item name="business_card_colors_gray">Cinza</item>
+    </string-array>
 </resources>

@@ -18,6 +18,10 @@ class MainViewModel(
     fun getAll(): LiveData<List<BusinessCard>> {
         return businessCardRepository.getAll()
     }
+
+    fun deleteByName(nome: String){
+        businessCardRepository.delete(nome)
+    }
 }
 
 class MainViewModelFactory(

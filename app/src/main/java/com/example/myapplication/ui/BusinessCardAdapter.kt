@@ -1,18 +1,17 @@
 package com.example.myapplication.ui
 
-import android.graphics.Color
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 import com.example.myapplication.data.BusinessCard
 import com.example.myapplication.databinding.BusinessCardItemBinding
 
 class BusinessCardAdapter:
-    androidx.recyclerview.widget.ListAdapter<BusinessCard, BusinessCardAdapter.ViewHolder>(DiffCallback()){
+    androidx.recyclerview.widget.ListAdapter<BusinessCard, BusinessCardAdapter.ViewHolder>(DiffCallback()) {
 
     var listenerShare: (View) -> Unit = {}
+    var listenerDelete: (String) -> Unit = {}
 
     inner class ViewHolder(
         private val binding: BusinessCardItemBinding
@@ -20,12 +19,15 @@ class BusinessCardAdapter:
 
         fun bind(item: BusinessCard){
             binding.businessCardName.text = item.nome
-            binding.businessCardPhone.text = item.telefone
+            binding.businessCardPhone.text = item.telefone.format()
             binding.businessCardEmail.text = item.email
             binding.businessCardCompany.text = item.empresa
-            binding.cardBody.setCardBackgroundColor(Color.parseColor(item.corDeFundo))
+            binding.cardBody.setCardBackgroundColor(Integer.parseInt(item.corDeFundo))
             binding.cardBody.setOnClickListener {
                 listenerShare(it)
+            }
+            binding.cardItemDelete.setOnClickListener {
+                listenerDelete(item.nome)
             }
         }
     }

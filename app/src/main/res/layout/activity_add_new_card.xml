@@ -2,9 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AddNewCard">
+    android:backgroundTint="#FFFFFF"
+    tools:context=".ui.AddNewCardActivity">
 
     <TextView
         android:id="@+id/tv_new_card_title"
@@ -17,7 +19,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"/>
+        app:layout_constraintVertical_bias="0.05" />
 
     <ImageView
         android:id="@+id/close_add_card"
@@ -31,10 +33,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/new_card_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_new_card_title"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/style_text_input_add_card"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/style_text_input_add_card">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_new_card_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -44,54 +46,43 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/new_card_phone"
-        app:layout_constraintTop_toBottomOf="@+id/new_card_name"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/style_text_input_add_card"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/style_text_input_add_card">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_card_name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/new_card_phone" />
+            android:hint="@string/new_card_phone"
+            android:inputType="phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/new_card_email"
-        app:layout_constraintTop_toBottomOf="@id/new_card_phone"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/style_text_input_add_card"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/style_text_input_add_card">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_card_phone">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/new_card_email" />
+            android:hint="@string/new_card_email"
+            android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/new_card_company"
-        app:layout_constraintTop_toBottomOf="@id/new_card_email"
-        app:layout_constraintStart_toStartOf="parent"
+        style="@style/style_text_input_add_card"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/style_text_input_add_card">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_card_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/new_card_company" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/new_card_color"
-        app:layout_constraintTop_toBottomOf="@id/new_card_company"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        style="@style/style_text_input_add_card">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/new_card_color" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -109,5 +100,25 @@
         app:layout_constraintStart_toStartOf="parent">
 
     </Button>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/new_card_menu_color"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/new_card_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_card_company">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompleteColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="Branco"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
