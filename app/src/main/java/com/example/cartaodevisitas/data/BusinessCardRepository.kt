@@ -1,4 +1,4 @@
-package com.example.myapplication.data
+package com.example.cartaodevisitas.data
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

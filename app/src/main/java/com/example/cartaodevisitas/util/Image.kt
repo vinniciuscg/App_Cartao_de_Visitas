@@ -1,4 +1,4 @@
-package com.example.myapplication.util
+package com.example.cartaodevisitas.util
 
 import android.content.ContentValues
 import android.content.Context
@@ -12,7 +12,7 @@ import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.example.myapplication.R
+import com.example.cartaodevisitas.R
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream

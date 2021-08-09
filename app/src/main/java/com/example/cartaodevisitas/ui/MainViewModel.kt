@@ -1,10 +1,10 @@
-package com.example.myapplication.ui
+package com.example.cartaodevisitas.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.data.BusinessCard
-import com.example.myapplication.data.BusinessCardRepository
+import com.example.cartaodevisitas.data.BusinessCard
+import com.example.cartaodevisitas.data.BusinessCardRepository
 import java.lang.IllegalArgumentException
 
 class MainViewModel(

@@ -1,8 +1,8 @@
-package com.example.myapplication
+package com.example.cartaodevisitas
 
 import android.app.Application
-import com.example.myapplication.data.AppDatabase
-import com.example.myapplication.data.BusinessCardRepository
+import com.example.cartaodevisitas.data.AppDatabase
+import com.example.cartaodevisitas.data.BusinessCardRepository
 
 class App : Application() {
     val database by lazy { AppDatabase.getDatabase(this)}

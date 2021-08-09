@@ -1,11 +1,10 @@
-package com.example.myapplication.ui
+package com.example.cartaodevisitas.ui
 
 import android.view.*
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.R
-import com.example.myapplication.data.BusinessCard
-import com.example.myapplication.databinding.BusinessCardItemBinding
+import com.example.cartaodevisitas.data.BusinessCard
+import com.example.cartaodevisitas.databinding.BusinessCardItemBinding
 
 class BusinessCardAdapter:
     androidx.recyclerview.widget.ListAdapter<BusinessCard, BusinessCardAdapter.ViewHolder>(DiffCallback()) {

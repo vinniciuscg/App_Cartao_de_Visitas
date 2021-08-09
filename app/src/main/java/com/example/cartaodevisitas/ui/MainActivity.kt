@@ -1,17 +1,13 @@
-package com.example.myapplication.ui
+package com.example.cartaodevisitas.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.MenuItem
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import com.example.myapplication.App
-import com.example.myapplication.R
-import com.example.myapplication.databinding.ActivityMainBinding
-import com.example.myapplication.util.Image
+import com.example.cartaodevisitas.App
+import com.example.cartaodevisitas.databinding.ActivityMainBinding
+import com.example.cartaodevisitas.util.Image
 
 class MainActivity : AppCompatActivity() {
 

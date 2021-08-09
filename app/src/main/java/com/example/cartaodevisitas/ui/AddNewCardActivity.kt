@@ -1,18 +1,16 @@
-package com.example.myapplication.ui
+package com.example.cartaodevisitas.ui
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.core.graphics.toColor
 import androidx.core.widget.doAfterTextChanged
-import com.example.myapplication.App
-import com.example.myapplication.R
-import com.example.myapplication.data.BusinessCard
-import com.example.myapplication.databinding.ActivityAddNewCardBinding
+import com.example.cartaodevisitas.App
+import com.example.cartaodevisitas.R
+import com.example.cartaodevisitas.data.BusinessCard
+import com.example.cartaodevisitas.databinding.ActivityAddNewCardBinding
 
 class AddNewCardActivity : AppCompatActivity() {
 
